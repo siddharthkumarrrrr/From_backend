@@ -59,7 +59,7 @@ router.get('/verify-token', isValidated, (req, res) => {
         user: req.user
     });
 });
-router.get('/all', isValidated, async (req, res) => {
+router.get('/all',  async (req, res) => {
     try {
         const alumni = await Alumni.find({});
         res.status(200).json(alumni);
