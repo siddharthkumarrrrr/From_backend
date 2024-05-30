@@ -6,6 +6,7 @@ const alumniSchema = new Schema({
     email: {
         type: String,
         required: true,
+        unique:true,
         match: /.+\@.+\..+/, // Email format validation
     },
     password: {
