@@ -12,6 +12,7 @@ router.post('/register', async (req, res) => {
         // Check if the email already exists
         const existingUser = await Alumni.findOne({ email });
         if (existingUser) {
+            alert("email already exist");
             return res.status(400).json({ message: 'Email already exists' });
         }
 
